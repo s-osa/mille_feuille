@@ -16,13 +16,11 @@ module MilleFeuille
       builder.svg(xmlns: 'http://www.w3.org/2000/svg', width: @pattern.size, height: height) { |svg|
         svg.rect(x: 0, y: 0, width: @pattern.size, height: height, fill: 'white')
         pattern_chunks.each do |pattern_chunk|
-          svg.g(class: chunk_color(pattern_chunk)) do |group|
-            group.rect(x: x, y: 0, width: pattern_chunk.size, height: height, fill: chunk_color(pattern_chunk))
-            x += pattern_chunk.size
-          end
+          svg.rect(x: x, y: 0, width: pattern_chunk.size, height: height, fill: chunk_color(pattern_chunk))
+          x += pattern_chunk.size
         end
       }
-      builder.to_s
+      builder.target!.to_s
     end
 
     private
