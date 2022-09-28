@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-RSpec.describe MilleFeuille::BarSymbol do
+RSpec.describe MilleFeuille::CommonBarSymbol do
   describe "#svg" do
-    let(:bar_symbol) { MilleFeuille::BarSymbol.new(pattern) }
+    let(:bar_symbol) { described_class.new(pattern) }
     let(:pattern) { [0, 1, 0, 1, 0] }
 
     it "returns SVG string" do

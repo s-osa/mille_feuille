@@ -1,7 +1,7 @@
 require "builder"
 
 module MilleFeuille
-  class BarSymbol
+  class CommonBarSymbol
     # @param pattern [Array<Integer>] Array of 0 (white) or 1 (black).
     def initialize(pattern)
       @pattern = pattern

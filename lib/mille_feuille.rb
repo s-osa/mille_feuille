@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_relative "mille_feuille/bar_symbol"
 require_relative "mille_feuille/code128"
+require_relative "mille_feuille/common_bar_symbol"
 require_relative "mille_feuille/version"
 
 module MilleFeuille
